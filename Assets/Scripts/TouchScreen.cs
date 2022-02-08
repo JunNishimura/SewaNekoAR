@@ -7,14 +7,14 @@ using UnityEngine.XR.ARSubsystems;
 public class TouchScreen : MonoBehaviour
 {
     public GameObject cube;
-    ARRaycastManager arRaycastManager;
-    List<ARRaycastHit> hits;
+    ARRaycastManager _arRaycastManager;
+    List<ARRaycastHit> _hits;
 
     private void Awake()
     {
-        arRaycastManager = GetComponent<ARRaycastManager>();
+        _arRaycastManager = GetComponent<ARRaycastManager>();
 
-        hits = new List<ARRaycastHit>();
+        _hits = new List<ARRaycastHit>();
     }
 
     private void Update()
@@ -22,12 +22,9 @@ public class TouchScreen : MonoBehaviour
         if (Input.touchCount == 0)
             return;
 
-        if (arRaycastManager.Raycast(Input.GetTouch(0).position, hits))
+        if (_arRaycastManager.Raycast(Input.GetTouch(0).position, _hits))
         {
-            if (hits[0].hitType == TrackableType.Planes)
-            {
-                Instantiate(cube, hits[0].pose.position, Quaternion.identity);
-            }
+            Instantiate(cube, _hits[0].pose.position, Quaternion.identity);
         }
     }
 }
