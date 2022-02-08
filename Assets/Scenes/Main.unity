@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 828209376}
   - component: {fileID: 828209375}
   - component: {fileID: 828209374}
+  - component: {fileID: 828209378}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -257,6 +258,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &828209378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828209373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15dd531834760542a987a501a562d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cube: {fileID: 1526554761915109350, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
 --- !u!1 &948248747
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +379,7 @@ GameObject:
   - component: {fileID: 1055042276}
   m_Layer: 0
   m_Name: AR Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -439,8 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4966719baa26e4b0e8231a24d9bd491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FocusMode: 1
-  m_LightEstimationMode: 0
+  m_FocusMode: -1
+  m_LightEstimationMode: -1
   m_AutoFocus: 1
   m_LightEstimation: 0
   m_FacingDirection: 1
