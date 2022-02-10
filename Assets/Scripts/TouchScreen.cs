@@ -56,10 +56,17 @@ public class TouchScreen : MonoBehaviour
         float angle = Mathf.Atan2(camDirection.x, camDirection.z) * Mathf.Rad2Deg;
         Vector3 rotVec = Vector3.up * angle;
         _spawnedCat = Instantiate(_catPrefab, hitPos, Quaternion.Euler(rotVec));
+        
+        SwitchARPlane();
+    }
+
+    void SwitchARPlane()
+    {
         foreach (ARPlane plane in _arPlaneManager.trackables)
         {
             Destroy(plane.gameObject);
         }
+        _arPlaneManager.planePrefab = Resources.Load("Prefabs/OcclusionPlane") as GameObject;
     }
 
     /// <summary>
