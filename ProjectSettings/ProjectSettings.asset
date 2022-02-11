@@ -135,7 +135,8 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: e8ea748a7b7404fc283695f0d2baba86, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -483,8 +484,8 @@ PlayerSettings:
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
   cameraUsageDescription: Required For AR.
-  locationUsageDescription: 
-  microphoneUsageDescription: 
+  locationUsageDescription: Required For AR.
+  microphoneUsageDescription: Required For AR.
   bluetoothUsageDescription: 
   switchNMETAOverride: 
   switchNetLibKey: 

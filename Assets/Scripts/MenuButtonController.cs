@@ -11,19 +11,19 @@ public class MenuButtonController : MonoBehaviour
         // Debug.Log(objTitle);
         switch (objTitle) {
             case "王子駅前":
-                SceneManager.LoadSceneAsync("Main");
+                SceneManager.LoadSceneAsync("OjiStationAR");
                 break;
             case "花壇前":
-                SceneManager.LoadSceneAsync("Main");
+                SceneManager.LoadSceneAsync("FlowersAR");
                 break;
             case "石鍋商店前":
-                SceneManager.LoadSceneAsync("Main");
+                SceneManager.LoadSceneAsync("IshinabeStoreAR");
                 break;
             case "王子稲荷前":
-                SceneManager.LoadSceneAsync("Main");
+                SceneManager.LoadSceneAsync("InariShrineAR");
                 break;
             case "名主の滝公園前":
-                SceneManager.LoadSceneAsync("Main");
+                SceneManager.LoadSceneAsync("NanushiParkAR");
                 break;
             default:
                 break;

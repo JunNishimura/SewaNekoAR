@@ -11,6 +11,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 2967b746be007414da0bba9ba6e3de6f
+  - enabled: 1
+    path: Assets/Scenes/OjiStationAR.unity
+    guid: 4c3f62edbb6e34718811e855db2609c2
+  - enabled: 1
+    path: Assets/Scenes/FlowersAR.unity
+    guid: 1e352a6c7f9634f5492b59741b0450a7
+  - enabled: 1
+    path: Assets/Scenes/IshinabeStoreAR.unity
+    guid: 3ff568d2c3ac94693987939cf9580ace
+  - enabled: 1
+    path: Assets/Scenes/InariShrineAR.unity
+    guid: 3a8cee835cc4f4685997e866bb71cf56
+  - enabled: 1
+    path: Assets/Scenes/NanushiParkAR.unity
+    guid: b449b881189cd41d392846439d3c0be9
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
