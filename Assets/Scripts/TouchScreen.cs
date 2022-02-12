@@ -25,30 +25,6 @@ public class TouchScreen : MonoBehaviour
     }
 
     /// <summary>
-    /// spawn cat object into the world.
-    /// </summary>
-    /// <param name="hitPos"></param>
-    //void SpawnObject(Vector3 hitPos)
-    //{
-    //    // カメラの方向を向くように生成オブジェクトを回転させる
-    //    Vector3 camDirection = Camera.main.transform.position - hitPos;
-    //    float angle = Mathf.Atan2(camDirection.x, camDirection.z) * Mathf.Rad2Deg;
-    //    Vector3 rotVec = Vector3.up * angle;
-    //    _spawnedCat = Instantiate(_catPrefab, hitPos, Quaternion.Euler(rotVec));
-        
-    //    SwitchARPlane();
-    //}
-
-    //void SwitchARPlane()
-    //{
-    //    foreach (ARPlane plane in _arPlaneManager.trackables)
-    //    {
-    //        Destroy(plane.gameObject);
-    //    }
-    //    _arPlaneManager.planePrefab = Resources.Load("Prefabs/OcclusionPlane") as GameObject;
-    //}
-
-    /// <summary>
     /// return true if the user touched the cat.
     /// </summary>
     /// <param name="touchPosOnScreen"></param>
