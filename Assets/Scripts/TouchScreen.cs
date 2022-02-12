@@ -7,17 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 
 public class TouchScreen : MonoBehaviour
 {
-    public GameObject _catPrefab;
-
-    ARRaycastManager _arRaycastManager;
-    ARPlaneManager _arPlaneManager;
-    GameObject _spawnedCat;
-
-    void Awake()
-    {
-        _arRaycastManager = GetComponent<ARRaycastManager>();
-        _arPlaneManager = GetComponent<ARPlaneManager>();
-    }
+    public GameObject _cat;
 
     void Update()
     {
@@ -27,20 +17,9 @@ public class TouchScreen : MonoBehaviour
         var touch = Input.GetTouch(0);
         if (touch.phase == TouchPhase.Began)
         {
-            if (_spawnedCat == null)
+            if (IsCatHit(touch.position))
             {
-                var hits = new List<ARRaycastHit>();
-                if (_arRaycastManager.Raycast(touch.position, hits, TrackableType.Planes))
-                {
-                    SpawnObject(hits[0].pose.position);
-                }
-            }
-            else
-            {
-                if (IsCatHit(touch.position))
-                {
-                    _spawnedCat.GetComponent<CatController>().Meow();
-                }
+                _cat.GetComponent<CatController>().Meow();
             }
         }
     }
@@ -49,25 +28,25 @@ public class TouchScreen : MonoBehaviour
     /// spawn cat object into the world.
     /// </summary>
     /// <param name="hitPos"></param>
-    void SpawnObject(Vector3 hitPos)
-    {
-        // カメラの方向を向くように生成オブジェクトを回転させる
-        Vector3 camDirection = Camera.main.transform.position - hitPos;
-        float angle = Mathf.Atan2(camDirection.x, camDirection.z) * Mathf.Rad2Deg;
-        Vector3 rotVec = Vector3.up * angle;
-        _spawnedCat = Instantiate(_catPrefab, hitPos, Quaternion.Euler(rotVec));
+    //void SpawnObject(Vector3 hitPos)
+    //{
+    //    // カメラの方向を向くように生成オブジェクトを回転させる
+    //    Vector3 camDirection = Camera.main.transform.position - hitPos;
+    //    float angle = Mathf.Atan2(camDirection.x, camDirection.z) * Mathf.Rad2Deg;
+    //    Vector3 rotVec = Vector3.up * angle;
+    //    _spawnedCat = Instantiate(_catPrefab, hitPos, Quaternion.Euler(rotVec));
         
-        SwitchARPlane();
-    }
+    //    SwitchARPlane();
+    //}
 
-    void SwitchARPlane()
-    {
-        foreach (ARPlane plane in _arPlaneManager.trackables)
-        {
-            Destroy(plane.gameObject);
-        }
-        _arPlaneManager.planePrefab = Resources.Load("Prefabs/OcclusionPlane") as GameObject;
-    }
+    //void SwitchARPlane()
+    //{
+    //    foreach (ARPlane plane in _arPlaneManager.trackables)
+    //    {
+    //        Destroy(plane.gameObject);
+    //    }
+    //    _arPlaneManager.planePrefab = Resources.Load("Prefabs/OcclusionPlane") as GameObject;
+    //}
 
     /// <summary>
     /// return true if the user touched the cat.
