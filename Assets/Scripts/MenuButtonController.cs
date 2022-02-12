@@ -28,6 +28,9 @@ public class MenuButtonController : MonoBehaviour
             case "名主の滝公園前":
                 SceneManager.LoadSceneAsync("NanushiParkAR");
                 break;
+            case "Main":
+                SceneManager.LoadSceneAsync("Main");
+                break;
             default:
                 SceneManager.LoadSceneAsync("_BaseARTemplate");
                 break;
