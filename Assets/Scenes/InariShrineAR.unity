@@ -247,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _relocManager: {fileID: 2097994323}
   _arContents: {fileID: 1495631189}
+  _pretiaMap: {fileID: 7488085447535639704}
 --- !u!4 &609528337
 Transform:
   m_ObjectHideFlags: 0
@@ -320,11 +321,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 2
-    m_MaxSize: 36
+    m_MaxSize: 48
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -967,7 +968,13 @@ PrefabInstance:
     - target: {fileID: 7463386496500419418, guid: 3535af75677f0499e86f28b909776298,
         type: 3}
       propertyPath: m_Name
-      value: "\u70B9\u7FA4(\u30D3\u30EB\u30C9\u6642\u7121\u52B9\u5316\u304B\u524A\u9664)"
+      value: PretiaMap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3535af75677f0499e86f28b909776298, type: 3}
+--- !u!1 &7488085447535639704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7463386496500419418, guid: 3535af75677f0499e86f28b909776298,
+    type: 3}
+  m_PrefabInstance: {fileID: 7488085447535639703}
+  m_PrefabAsset: {fileID: 0}

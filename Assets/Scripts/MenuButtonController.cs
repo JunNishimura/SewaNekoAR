@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuButtonController : MonoBehaviour
 {
+    public static bool isDebug = true;
+
     public void OnClick()
     {
         string objTitle = this.gameObject.name;
@@ -26,7 +29,14 @@ public class MenuButtonController : MonoBehaviour
                 SceneManager.LoadSceneAsync("NanushiParkAR");
                 break;
             default:
+                SceneManager.LoadSceneAsync("_BaseARTemplate");
                 break;
         }
+    }
+
+    public void TapDebugToggle(bool isOn)
+    {
+        // bool isDebug = this.gameObject.GetComponent<Toggle>().isOn;
+        MenuButtonController.isDebug = isOn;
     }
 }

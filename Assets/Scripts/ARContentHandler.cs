@@ -10,9 +10,17 @@ public class ARContentHandler : MonoBehaviour
     [SerializeField]
     private GameObject _arContents;
 
+    [SerializeField]
+    private GameObject _pretiaMap;
+
     void OnEnable()
     {
         _relocManager.OnRelocalized += OnRelocalized;
+        if (MenuButtonController.isDebug && _pretiaMap != null) {
+            _pretiaMap.SetActive(true);
+        } else {
+            _pretiaMap.SetActive(false);
+        }
     }
 
     void OnDisable()

@@ -87,12 +87,12 @@ public class ARBaseSceneController : MonoBehaviour
                 _messageLabel.text = "Relocalized";
                 break;
         }
-        _relocState = state;
+        relocState = state;
     }
 
     private void OnScoreUpdated(float score)
     {
-        _relocScore = score;
+        relocScore = score;
     }
 
     // private void OnRelocalized()
@@ -102,6 +102,25 @@ public class ARBaseSceneController : MonoBehaviour
 
     private void UpdateMessageBubble()
     {
+        if (MenuButtonController.isDebug) {
+            switch (_relocState)
+            {
+                case SharedAnchorState.Initializing:
+                    _messageLabel.text = "State: Initializing";
+                    break;
+                case SharedAnchorState.Stopped:
+                    _messageLabel.text = "State: Stopped";
+                    break;
+                case SharedAnchorState.Relocalizing:
+                    _messageLabel.text = "State: Relocalizing";
+                    break;
+                case SharedAnchorState.Relocalized:
+                    _messageLabel.text = "State: Relocalized";
+                    break;
+            }
+            _messageLabel.text += string.Format("\nScore:{0}", _relocScore);
+            return;
+        }
         if (_catLosing) {
             _messageBubble.SetActive(true);
             _messageLabel.text = "ねこがどこに行ってしまったのだろう……。";
