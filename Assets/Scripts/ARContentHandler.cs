@@ -18,6 +18,7 @@ public class ARContentHandler : MonoBehaviour
         _relocManager.OnRelocalized += OnRelocalized;
         if (MenuButtonController.isDebug && _pretiaMap != null) {
             _pretiaMap.SetActive(true);
+            _arContents.SetActive(true);
         } else {
             _pretiaMap.SetActive(false);
         }
