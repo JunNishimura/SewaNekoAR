@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using PretiaArCloud;
+using TMPro;
 
 public class ARBaseSceneController : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class ARBaseSceneController : MonoBehaviour
     private GameObject _messageBoard;
 
     [SerializeField]
-    private Text _messageLabel;
+    private TextMeshProUGUI _messageLabel;
 
     private bool _catIsVisible = false;
     private bool _catLosing = false;
