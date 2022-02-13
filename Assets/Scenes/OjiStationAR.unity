@@ -1306,7 +1306,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1016039176}
+  - {fileID: 1379103975}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1345,8 +1345,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _relocManager: {fileID: 2097994323}
-  _messageBubble: {fileID: 1016039175}
-  _messageLabel: {fileID: 817168225}
+  _messageBoard: {fileID: 1379103976}
+  _messageLabel: {fileID: 1379103974}
 --- !u!4 &1802089327
 Transform:
   m_ObjectHideFlags: 0

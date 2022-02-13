@@ -11,7 +11,7 @@ public class ARBaseSceneController : MonoBehaviour
     private ARSharedAnchorManager _relocManager;
 
     [SerializeField]
-    private GameObject _messageBubble;
+    private GameObject _messageBoard;
 
     [SerializeField]
     private Text _messageLabel;
@@ -122,17 +122,17 @@ public class ARBaseSceneController : MonoBehaviour
             return;
         }
         if (_catLosing) {
-            _messageBubble.SetActive(true);
+            _messageBoard.SetActive(true);
             _messageLabel.text = "ねこがどこに行ってしまったのだろう……。";
             _catLosing = false;
             return;
         } else if (_catIsVisible) {
-            _messageBubble.SetActive(false);
+            _messageBoard.SetActive(false);
             _messageLabel.text = "";
             if (SystemInfo.supportsVibration) { Handheld.Vibrate(); }
             return;
         }
-        _messageBubble.SetActive(true);
+        _messageBoard.SetActive(true);
         switch (Mathf.Floor(_relocScore/(1/_scoreStepNum))) {
             case 0: // 0% <= Score < 20%
                 _messageLabel.text = "どこにもねこが見当たらない……。";
